@@ -1,5 +1,5 @@
 /**
- * Given an unsorted array of integers, find a pair with given sum in it.
+ * Given an unsorted array of integers, find all pairs with given sum in it.
  *
  * For example,
  *
