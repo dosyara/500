@@ -32,7 +32,6 @@ function findArrayForSum(arr, sum) {
 }
 
 function findArrayForSum2(arr, sum) {
-    let result = [];
     let map = {};
     let len = 0;
     let ending_index = -1;
