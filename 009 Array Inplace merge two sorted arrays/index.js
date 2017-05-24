@@ -52,9 +52,38 @@ function inplaceSort(arr1, arr2) {
 
 }
 
+function inplaceSort2(arr1, arr2) {
+    let n1 = arr1.length;
+    let n2 = arr2.length;
+
+    let i = 0;
+    while (i < n1) {
+        if (arr1[i] > arr2[0]) {
+            let tmp = arr1[i];
+            arr1[i] = arr2[0];
+            arr2[0] = tmp;
+
+            let first = arr2[0];
+            let k;
+            for (k = 1; k < n2 && arr2[k] < first; k++) {
+                arr2[k - 1] = arr2[k];
+            }
+
+            arr2[k - 1] = first;
+        }
+        i++;
+    }
+}
+
+function swap(arr1, i1, arr2, i2) {
+    let tmp = arr1[i1];
+    arr1[i1] = arr2[i2];
+    arr2[i2] = tmp;
+}
+
 let arr1 = [1, 4, 7, 8, 10];
 let arr2 = [2, 3, 9];
-inplaceSort(arr1, arr2);
+inplaceSort2(arr1, arr2);
 
 function shiftRight(arr, index) {
     let prev;
